@@ -2,6 +2,16 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.2.0] - 2025-05-28 21:38
+
+### Añadido
+- Implementado componente ErrorBoundary para capturar y mostrar errores de forma amigable
+- Añadido manejo de errores para variables de entorno faltantes en producción
+
+### Corregido
+- Solucionado el problema de pantalla en blanco en Netlify debido a variables de entorno no configuradas
+- Mejorado el manejo de errores en el cliente de Supabase para evitar fallos catastróficos
+
 ## [0.1.9] - 2025-05-28 21:24
 
 ### Corregido

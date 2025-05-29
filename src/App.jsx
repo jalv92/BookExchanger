@@ -5,6 +5,7 @@ import MainLayout from './components/Layout/MainLayout'; // Adjust path
 import { ThemeProvider } from './contexts/ThemeContext.jsx'; // Actualizado a .jsx
 import { AuthProvider, AuthContext } from './contexts/AuthContext.jsx'; // Actualizado a .jsx
 import { NotificationProvider } from './contexts/NotificationContext.jsx'; // Actualizado a .jsx
+import ErrorBoundary from './components/Common/ErrorBoundary';
 
 // Import Pages - todas las páginas están definidas en pages.jsx
 import { 
@@ -42,12 +43,13 @@ const ProtectedRoute = ({ children }) => {
 
 function App() {
   return (
-    <ThemeProvider>
-      <AuthProvider>
-        <NotificationProvider> {/* Wrap with NotificationProvider */}
-          <Router>
-            <MainLayout>
-              <Routes>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <AuthProvider>
+          <NotificationProvider> {/* Wrap with NotificationProvider */}
+            <Router>
+              <MainLayout>
+                <Routes>
                 {/* Public Routes */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/browse" element={<BrowseBooksPage />} />
@@ -93,12 +95,13 @@ function App() {
                 
                 {/* Catch-all for 404 */}
                 <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </MainLayout>
-          </Router>
-        </NotificationProvider>
-      </AuthProvider>
-    </ThemeProvider>
+                </Routes>
+              </MainLayout>
+            </Router>
+          </NotificationProvider>
+        </AuthProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 
