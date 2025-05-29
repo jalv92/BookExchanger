@@ -2,6 +2,17 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.5.3] - 2025-05-29 11:10
+
+### Corregido
+- Solucionado problema de compilación en Netlify relacionado con la configuración de Vite
+- Corregido error de sintaxis en el archivo de configuración de Vite
+- Actualizada la configuración de Netlify para un despliegue más confiable
+
+### Mejorado
+- Añadido soporte para alias de rutas con @/ para importaciones más limpias
+- Optimizada la configuración de construcción para producción
+
 ## [0.5.2] - 2025-05-29 10:58
 
 ### Mejorado

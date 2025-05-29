@@ -4,21 +4,42 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react({
-    // Incluir todos los archivos .jsx y .js en src
-    include: ['**/*.jsx', '**/*.js'],
-  })],
+  base: '/',
+  plugins: [
+    react({
+      include: ['**/*.{js,jsx,ts,tsx}'],
+      babel: {
+        presets: ['@babel/preset-react'],
+      },
+    }),
+  ],
   resolve: {
-    extensions: ['.js', '.jsx', '.json'] // Asegurar que Vite resuelva estos tipos de archivo
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+  },
+  server: {
+    port: 5173,
+    open: true,
   },
   build: {
+    outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html')
-      }
-    }
+        main: resolve(__dirname, 'index.html'),
+      },
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router-dom'],
+          vendor: ['@supabase/supabase-js'],
+        },
+      },
+    },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'] // Asegurar que estas dependencias se optimicen
+    include: ['react', 'react-dom', 'react-router-dom', '@supabase/supabase-js'],
+    exclude: ['js-big-decimal']
   }
 });
