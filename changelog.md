@@ -2,6 +2,13 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.3] - 2025-05-28 20:44
+
+### Corregido
+- Actualizada la versión del proyecto en package.json para que coincida con el changelog
+- Añadido script "clean" para facilitar la limpieza de dependencias en caso de problemas
+- Creado archivo netlify.toml para configurar correctamente el despliegue en Netlify
+
 ## [0.1.2] - 2025-05-28 20:40
 
 ### Corregido
