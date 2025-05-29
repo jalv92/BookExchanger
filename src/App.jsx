@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './components/Layout/MainLayout'; // Adjust path
-import { ThemeProvider } from './contexts/ThemeContext'; // Adjust path
-import { AuthProvider, AuthContext } from './contexts/AuthContext'; // Adjust path
-import { NotificationProvider } from './contexts/NotificationContext'; // Adjust path
+import { ThemeProvider } from './contexts/ThemeContext.jsx'; // Actualizado a .jsx
+import { AuthProvider, AuthContext } from './contexts/AuthContext.jsx'; // Actualizado a .jsx
+import { NotificationProvider } from './contexts/NotificationContext.jsx'; // Actualizado a .jsx
 
 // Import Pages
 import { HomePage } from './pages/HomePage';

@@ -2,6 +2,14 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.5] - 2025-05-28 20:51
+
+### Corregido
+- Renombrados los archivos de contexto de .js a .jsx para garantizar el correcto procesamiento por Vite
+- Actualizadas las importaciones en App.jsx y hooks para usar los archivos .jsx
+- Mejorada la configuración de Vite para manejar correctamente los archivos JSX
+- Optimizadas las dependencias principales para evitar problemas durante la compilación
+
 ## [0.1.4] - 2025-05-28 20:48
 
 ### Corregido
