@@ -1,0 +1,28 @@
+# Changelog
+
+Este archivo documenta todos los cambios notables en el proyecto BookShare.
+
+## [0.1.1] - 2025-05-28 20:34
+
+### Corregido
+- Solución al problema de despliegue en Netlify
+- Creado archivo vite.config.js para configurar correctamente el punto de entrada
+- Movido index.html de la carpeta public a la raíz del proyecto
+
+## [0.1.0] - 2025-05-28 20:33
+
+### Añadido
+- Configuración inicial del proyecto con React y Vite
+- Integración con Supabase para autenticación y base de datos
+- Estructura básica de componentes para la interfaz de usuario
+- Sistema de temas claro/oscuro
+- Contextos para autenticación, temas y notificaciones
+- Rutas protegidas para funcionalidades que requieren autenticación
+- Componentes placeholder para las principales funcionalidades
+
+### Por hacer
+- Implementación completa de la funcionalidad de búsqueda de libros
+- Desarrollo del sistema de mensajería entre usuarios
+- Finalización del sistema de intercambio de libros
+- Mejora de la interfaz de usuario con estilos completos
+- Implementación de pruebas unitarias y de integración
