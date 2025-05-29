@@ -6,17 +6,19 @@ import { ThemeProvider } from './contexts/ThemeContext.jsx'; // Actualizado a .j
 import { AuthProvider, AuthContext } from './contexts/AuthContext.jsx'; // Actualizado a .jsx
 import { NotificationProvider } from './contexts/NotificationContext.jsx'; // Actualizado a .jsx
 
-// Import Pages
-import { HomePage } from './pages/HomePage';
-import { BrowseBooksPage } from './pages/BrowseBooksPage';
-import { BookDetailPage } from './pages/BookDetailPage';
-import { AddBookPage } from './pages/AddBookPage';
-import { UserProfilePage } from './pages/UserProfilePage';
-import { MessagesPage } from './pages/MessagesPage';
-import { LoginPage } from './pages/LoginPage';
-import { RegisterPage } from './pages/RegisterPage';
-import { SettingsPage } from './pages/SettingsPage';
-import { NotFoundPage } from './pages/NotFoundPage'; // Example 404
+// Import Pages - todas las páginas están definidas en pages.jsx
+import { 
+  HomePage,
+  BrowseBooksPage,
+  BookDetailPage,
+  AddBookPage,
+  UserProfilePage,
+  MessagesPage,
+  LoginPage,
+  RegisterPage,
+  SettingsPage,
+  NotFoundPage
+} from './pages/pages.jsx';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {

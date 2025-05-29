@@ -2,6 +2,12 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.6] - 2025-05-28 20:58
+
+### Corregido
+- Corregidas las importaciones de páginas en App.jsx para que apunten al archivo pages.jsx donde realmente están definidos los componentes
+- Solucionado el error "Could not resolve './pages/HomePage' from 'src/App.jsx'" que impedia el despliegue en Netlify
+
 ## [0.1.5] - 2025-05-28 20:51
 
 ### Corregido
