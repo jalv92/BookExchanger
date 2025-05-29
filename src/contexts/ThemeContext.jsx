@@ -5,28 +5,26 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    const storedTheme = localStorage.getItem('theme');
-    return storedTheme || 'light'; // Default to light theme
+    // Verificar si hay un tema guardado en localStorage
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) return savedTheme;
+      
+      // Si no hay tema guardado, verificar la preferencia del sistema
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return 'light'; // Valor por defecto para SSR
   });
 
-  const applyTheme = useCallback((selectedTheme) => {
-    if (selectedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
+  // Aplicar el tema al cargar el componente
   useEffect(() => {
-    applyTheme(theme);
+    document.documentElement.className = theme;
     localStorage.setItem('theme', theme);
-  }, [theme, applyTheme]);
+  }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  const toggleTheme = useCallback(() => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

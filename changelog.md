@@ -2,6 +2,24 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.5.2] - 2025-05-29 10:58
+
+### Mejorado
+- Implementado sistema de temas claro/oscuro con persistencia en localStorage
+- Añadido botón flotante para cambiar entre temas
+- Mejorada la accesibilidad con etiquetas ARIA y contraste de colores
+- Optimizada la transición entre temas para una experiencia más fluida
+
+## [0.5.1] - 2025-05-29 10:20
+
+### Añadido
+- Creado script `fix_jq.ps1` para solucionar el problema de accesibilidad de jq en Git Bash
+- Implementada solución manual para configurar jq en Git Bash
+- Añadido script `jq_wrapper.sh` como solución alternativa para el problema de jq
+
+### Corregido
+- Proporcionada solución para el error "jq: command not found" al ejecutar scripts en Git Bash
+
 ## [0.5.0] - 2025-05-29 09:33
 
 ### Añadido
