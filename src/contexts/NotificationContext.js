@@ -3,6 +3,35 @@ import React, { createContext, useState, useCallback } from 'react';
 
 export const NotificationContext = createContext();
 
+// Componente de visualización de notificaciones separado del provider
+const NotificationDisplay = ({ notifications, removeNotification }) => (
+  <div style={{
+    position: 'fixed',
+    top: '20px',
+    right: '20px',
+    zIndex: 1000,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px'
+  }}>
+    {notifications.map((notif) => (
+      <div
+        key={notif.id}
+        style={{
+          padding: '10px 15px',
+          borderRadius: '5px',
+          color: 'white',
+          backgroundColor: notif.type === 'error' ? 'red' : notif.type === 'success' ? 'green' : 'blue',
+          boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        }}
+        onClick={() => removeNotification(notif.id)}
+      >
+        {notif.message}
+      </div>
+    ))}
+  </div>
+);
+
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]); // Array of notification objects
 
@@ -28,41 +57,10 @@ export const NotificationProvider = ({ children }) => {
     );
   }, []);
 
-  // Placeholder for a UI component to display notifications
-  // You would typically create a <NotificationDisplay /> component that uses this context
-  const NotificationDisplay = () => (
-    <div style={{
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      zIndex: 1000,
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '10px'
-    }}>
-      {notifications.map((notif) => (
-        <div
-          key={notif.id}
-          style={{
-            padding: '10px 15px',
-            borderRadius: '5px',
-            color: 'white',
-            backgroundColor: notif.type === 'error' ? 'red' : notif.type === 'success' ? 'green' : 'blue',
-            boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-          }}
-          onClick={() => removeNotification(notif.id)}
-        >
-          {notif.message}
-        </div>
-      ))}
-    </div>
-  );
-
-
   return (
     <NotificationContext.Provider value={{ addNotification, removeNotification, notifications }}>
       {children}
-      <NotificationDisplay /> {/* Render the display component here or in App.jsx */}
+      <NotificationDisplay notifications={notifications} removeNotification={removeNotification} />
     </NotificationContext.Provider>
   );
 };

@@ -2,6 +2,12 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.2] - 2025-05-28 20:40
+
+### Corregido
+- Solucionado error de sintaxis en NotificationContext.js
+- Movido el componente NotificationDisplay fuera del NotificationProvider para evitar problemas de compilación
+
 ## [0.1.1] - 2025-05-28 20:34
 
 ### Corregido
