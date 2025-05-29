@@ -2,6 +2,13 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.8] - 2025-05-28 21:09
+
+### Corregido
+- Creado archivo Footer.jsx separado para solucionar el error "Could not resolve '../Common/Footer' from 'src/components/Layout/MainLayout.jsx'"
+- Creados archivos separados para los demás componentes comunes (SearchBar, FilterDropdown, Button, Modal, Spinner)
+- Reorganizada la estructura de archivos para mejorar la mantenibilidad y evitar futuros errores de resolución de módulos
+
 ## [0.1.7] - 2025-05-28 21:03
 
 ### Corregido

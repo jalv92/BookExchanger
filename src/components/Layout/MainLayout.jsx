@@ -1,7 +1,7 @@
 // src/components/Layout/MainLayout.jsx
 import React from 'react';
 import Navbar from '../Common/Navbar'; // Adjust path
-import { Footer } from '../Common/Footer'; // Adjust path
+import { Footer } from '../Common/Footer.jsx'; // Actualizado a .jsx
 
 const MainLayout = ({ children }) => {
   return (
