@@ -2,6 +2,36 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.5.0] - 2025-05-29 09:33
+
+### Añadido
+- Creado proyecto Supabase para BookShare
+- Configuradas tablas principales: profiles, books, user_books, book_exchanges, messages
+- Implementadas políticas de seguridad (RLS) para proteger los datos
+- Creadas funciones y triggers para manejar la lógica de negocio
+- Añadidas vistas útiles: available_books, pending_exchanges, user_conversations
+
+### Mejorado
+- Estructura de base de datos optimizada con índices para mejor rendimiento
+- Configuración automática de perfiles de usuario al registrarse
+
+## [0.4.0] - 2025-05-28 22:40
+
+### Añadido
+- Implementado sistema completo de animaciones con keyframes y clases de utilidad
+- Agregados efectos glassmórficos y neumórficos para elementos de UI
+- Incorporadas microinteracciones avanzadas para elementos interactivos
+- Diseñado sistema de grid y layout responsive usando variables CSS
+- Creados componentes modernos para formularios y controles
+- Implementado sistema de tipografía escalar con tamaños y pesos definidos
+
+### Mejorado
+- Actualizada la paleta de colores con tonos más oscuros y acentos vibrantes
+- Refinado el sistema de espaciado y escalado de componentes
+- Optimizada la experiencia para dispositivos móviles con breakpoints específicos
+- Mejorado el contraste y legibilidad en la interfaz de usuario
+- Implementadas transiciones suaves para una experiencia de navegación fluida
+
 ## [0.3.0] - 2025-05-28 22:24
 
 ### Añadido
