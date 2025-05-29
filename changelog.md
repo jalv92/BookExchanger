@@ -2,6 +2,12 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.9] - 2025-05-28 21:24
+
+### Corregido
+- Creado componente AuthForm.jsx para solucionar el error "Could not resolve '../components/Auth/AuthForm' from 'src/pages/pages.jsx'"
+- Implementado formulario básico de autenticación para las páginas de inicio de sesión y registro
+
 ## [0.1.8] - 2025-05-28 21:09
 
 ### Corregido
