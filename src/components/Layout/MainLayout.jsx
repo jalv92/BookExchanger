@@ -1,18 +1,21 @@
 // src/components/Layout/MainLayout.jsx
 import React from 'react';
-import Navbar from '../Common/Navbar'; // Adjust path
-import { Footer } from '../Common/Footer.jsx'; // Actualizado a .jsx
+import Navbar from '../Common/Navbar';
+import { Footer } from '../Common/Footer.jsx';
+import '../../assets/styles/global.css';
 
 const MainLayout = ({ children }) => {
   return (
-    <>
+    <div className="app-wrapper">
       <Navbar />
-      <main style={{ padding: '1rem 2rem', minHeight: 'calc(100vh - 120px)' /* Adjust based on Nav/Footer height */ }}>
-        {/* MainLayout Component Placeholder */}
-        {children}
+      <main className="main-content">
+        <div className="container">
+          {children}
+        </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
+
 export default MainLayout;

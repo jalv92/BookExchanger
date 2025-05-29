@@ -2,6 +2,21 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.3.0] - 2025-05-28 22:24
+
+### Añadido
+- Implementada nueva interfaz de usuario moderna basada en los diseños proporcionados
+- Mejorados los estilos globales con sistema completo de variables CSS
+- Añadidos componentes mejorados de tarjetas, botones y elementos interactivos
+- Implementada navbar responsive con soporte para móviles
+- Añadido footer con información de contacto y enlaces útiles
+- Implementados efectos visuales como gradientes, hover states y transiciones
+
+### Mejorado
+- Rediseñado completamente el tema oscuro para mejor experiencia visual
+- Optimizada la responsividad para todos los tamaños de pantalla
+- Mejorada la arquitectura CSS con clases reutilizables
+
 ## [0.2.0] - 2025-05-28 21:38
 
 ### Añadido
