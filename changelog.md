@@ -2,6 +2,11 @@
 
 Este archivo documenta todos los cambios notables en el proyecto BookShare.
 
+## [0.1.4] - 2025-05-28 20:48
+
+### Corregido
+- Actualizada la versión de Node.js en netlify.toml de 18.16.0 a 20.10.0 para compatibilidad con Netlify
+
 ## [0.1.3] - 2025-05-28 20:44
 
 ### Corregido
